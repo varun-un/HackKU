@@ -13,8 +13,11 @@
         // decode json
         $json_arr = json_decode($data, true);
 
+        $userID = rand(1000000,9999999);
+        echo($userID);
+
         // add data
-        $json_arr[] = array('userID'=>rand(1000000000,9999999999), 'email'=>$_POST['Email'], 'password'=>$_POST['Password']);
+        $json_arr[] = array('userID'=>$userID, 'email'=>$_POST['Email'], 'password'=>$_POST['Password']);
 
         // encode json and save to file
         file_put_contents('../db/logins.json', json_encode($json_arr));
