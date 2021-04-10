@@ -1,9 +1,12 @@
+document.cookie = 0;
+
 const validLogIn = function(email, password, loginDB){
 
     for (var i = 0; i < loginDB.length; i++){
 
         if ((email === loginDB[i].email) && (password === loginDB[i].password)){
             window.location.href = "../html/home.html";
+            document.cookie = loginDB[i].userID;
             return loginDB[i].userID;
         }
     }

@@ -1,0 +1,38 @@
+[
+    {
+        "userID": 1984702,
+        "name": "Carl Wheezer",
+        "weight": 200,
+        "curCalories": 1560,
+        "curVeg": 2.3,
+        "curWater": 101,
+        "curProtein": 31
+    },
+    {
+        "userID": 3390462,
+        "name": "Anne Boat",
+        "weight": 130,
+        "curCalories": 1400,
+        "curVeg": 3.5,
+        "curWater": 96,
+        "curProtein": 22
+    },
+    {
+        "userID": 9001938,
+        "name": "Tim Cook",
+        "weight": 170,
+        "curCalories": 1605,
+        "curVeg": 1.4,
+        "curWater": 136,
+        "curProtein": 59
+    },
+    {
+        "userID": 1092738,
+        "name": "Po Popompous",
+        "weight": 152,
+        "curCalories": 1390,
+        "curVeg": 1.7,
+        "curWater": 74,
+        "curProtein": 18
+    }
+]

@@ -14,18 +14,31 @@
         $json_arr = json_decode($data, true);
 
         $GLOBALS['userID'] = rand(1000000,9999999);
-        echo($userID);
 
         // add data
         $json_arr[] = array('userID'=>$GLOBALS['userID'], 'email'=>$_POST['Email'], 'password'=>$_POST['Password']);
 
         // encode json and save to file
         file_put_contents('../db/logins.json', json_encode($json_arr));
+
+
+
+        // read json file
+        $data2 = file_get_contents('../db/userData.json');
+
+        // decode json
+        $json_arr2 = json_decode($data, true);
+
+        // add data
+        $json_arr[] = array('userID'=>$GLOBALS['userID'], 'name'=>$_POST['Name'], 'weight'=>150, 'curCalories'=>0, 'curVeg'=>0, 'curWater'=>0, 'curProtein'=>0);
+
+        // encode json and save to file
+        file_put_contents('../db/userData.json', json_encode($json_arr));
       }
 
 ?>
 
 <script>
     window.location.href = '../html/home.html';
-    document.cookie = "userID=" + "<?php $GLOBALS['userID']; ?>";
+    document.cookie = "<?php $GLOBALS['userID']; ?>";
 </script>
