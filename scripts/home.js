@@ -35,8 +35,13 @@ async function secondfunc() {
                     var waterPercent = (userObj.curWater)/(userObj.recWater);
                     var vegPercent = (userObj.curVeg)/(userObj.recVeg);
                     var proteinPercent = (userObj.curProtein)/(userObj.recProtein);
+                    var recCalories = userObj.recCalories;
+                    var recWater = userObj.recWater;
+                    var recVeg = userObj.recVeg;
+                    var recProtein = userObj.recProtein;
                 }
-                var groupScoresB = [groupScoresA, calPercent, waterPercent, vegPercent, proteinPercent];
+                var groupScoresB = [groupScoresA, calPercent, waterPercent, vegPercent, proteinPercent, recCalories, recWater, recVeg, 
+                    recProtein];
             }
             return groupScoresB;
         });
@@ -49,6 +54,11 @@ async function secondfunc() {
         document.getElementById("waterbar").style.width = groupScores[2] * 100 + "%";
         document.getElementById("vegbar").style.width = groupScores[3] * 100 + "%";
         document.getElementById("proteinbar").style.width = groupScores[4] * 100 + "%";
+
+        document.getElementById("calbar").innerHTML = (groupScores[1] * groupScores[5]) + " / " + groupScores[5];
+        document.getElementById("waterbar").innerHTML = (groupScores[2] * groupScores[6]) + " / " + groupScores[6];
+        document.getElementById("vegbar").innerHTML = (groupScores[3] * groupScores[7]) + " / " + groupScores[7];
+        document.getElementById("proteinbar").innerHTML = (groupScores[4] * groupScores[8]) + " / " + groupScores[8];
 
 
         groupScores = groupScores[0];
