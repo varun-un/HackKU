@@ -7,6 +7,7 @@ const validLogIn = function(email, password, loginDB){
             return loginDB[i].userID;
         }
     }
+    document.getElementById("passWrong").innerHTML = "The login is incorrect";
     return 0;
 }
 
