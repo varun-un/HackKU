@@ -30,7 +30,7 @@
         $json_arr2 = json_decode($data, true);
 
         // add data
-        $json_arr[] = array('userID'=>$GLOBALS['userID'], 'name'=>$_POST['Name'], 'weight'=>150, 'curCalories'=>0, 'curVeg'=>0, 'curWater'=>0, 'curProtein'=>0);
+        $json_arr[] = array('userID'=>$GLOBALS['userID'], 'name'=>$_POST['Name'], 'curCalories'=>0, 'curVeg'=>0, 'curWater'=>0, 'curProtein'=>0, 'recCalories'=>2000, 'recVeg'=>3, 'recWater'=>125, 'recProtein'=>50);
 
         // encode json and save to file
         file_put_contents('../db/userData.json', json_encode($json_arr));
