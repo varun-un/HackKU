@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>nutritioUS</title>
+
+    <link rel="stylesheet" href="/style.css" />
+
+    <script src="/script.js" defer></script>
+
+    <!--import hamburger reponsive navbar-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <div class="navbar" id="myNavbar">
+      <div class="logo">
+        <a href="/home.html" class="active">nutritioUS</a>
+      </div>
+      <a href="/home.html">Home</a>
+      <a href="/track.html">Track</a>
+      <a href="/group.html">Groups</a>
+      <a class="profile" href="/profile.html">Profile</a>
+    </div>
+  </head>
+  <body class="profile">
+    <h2 style="text-align: center;font-size:40px;color: #a48686">
+      <u>Anne Boat</u>
+    </h2>
+
+    <div class="box3">
+      <div class="box4">
+        <h2 style="float:left;margin-left:100px;">
+          Target Calories:
+        </h2>
+        <input type="text" name="Calories" placeholder="E.g. 1400" />
+        <h2 style="float:right;margin-right:100px;">
+          calories
+        </h2>
+      </div>
+
+      <div class="box4">
+        <h2 style="float:left;margin-left:100px;">
+          Target Water:
+        </h2>
+        <input type="text" name="Calories" placeholder="E.g. 6" />
+        <h2 style="float:right;margin-right:100px;">
+          fl oz
+        </h2>
+      </div>
+
+      <div class="box4">
+        <h2 style="float:left;margin-left:100px;">
+          Target Vegetables:
+        </h2>
+        <input type="text" name="Calories" placeholder="E.g. 2" />
+        <h2 style="float:right;margin-right:100px;">
+          servings
+        </h2>
+      </div>
+
+      <div class="box4">
+        <h2 style="float:left;margin-left:100px;">
+          Target Protein:
+        </h2>
+        <input type="text" name="Protein" placeholder="E.g. 30" />
+        <h2 style="float:right;margin-right:115px;">
+          grams
+        </h2>
+      </div>
+      
+      <button onclick="window.location.href='/home.html'" style="text-align:center;float:center;font-size:larger;margin:20px;padding:5px;background-color:black;color:white;border-radius:2px;width:100px;">
+          Submit
+        </button>
+      
+    </div>
+    <button onclick="window.location.href='/index.html'" style="text-align:center;font-size:larger;margin:20px;margin-top:40px;padding:5px;background-color:black;color:white;border-radius:2px;width:100px;">
+          Log out
+        </button>
+  </body>
+</html>

@@ -84,8 +84,6 @@ h2 {
   border-radius: 0px;
   width: 100%;
   background-color: #c4e0f9;
-  height: 100px;
-  background-color: #e6f0f0;
   box-sizing: border-box;
   margin: 0px;
   padding: 0px;
@@ -103,6 +101,11 @@ h2 {
   text-decoration: none;
   font-size: 18px;
   font-family: Helvetica, Sans-Serif;
+}
+
+.navbar .profile a{
+  float:right;
+  text-align:right;
 }
 
 /* Change the color of links on hover */
@@ -125,11 +128,6 @@ h2 {
 /* Hide the link that should open and close the topnav on small screens */
 .navbar .icon {
   display: none;
-}
-
-.profile{
-  float:right;
-  text-align:right;
 }
 
 .box2 {
@@ -179,7 +177,7 @@ h2 {
   box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
     0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
-.leaderboard h3{
+.leaderboard h3, .group h3{
   font-size:14px;
   background-color:white;
   border-radius:2px;
@@ -252,4 +250,20 @@ th{
   float:center;
 }
 
+.profile{
+  text-align:center;
+  float:center;
+}
+.profile h2{
+  font-size:20px;
+  margin:12px;
+}
 
+.profile input{
+  border: 2px hidden black;
+  margin: 6px;
+  width: 350px;
+  padding: 10px;
+  text-align: center;
+  background-color: #e6f0f0;
+}
