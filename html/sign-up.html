@@ -18,17 +18,17 @@
       <h2>
         Sign Up
       </h2>
-      <input type="email" placeholder="Enter email" /><br/>
-      <input type="password" placeholder="Enter password" />
+      <form method="post" name="sign-up" id="sign-up-form" action="sign-up.php">
+        <input type="email" id="email" placeholder="Enter email" name="Email" /><br/>
+        <input type="password" id="pass" placeholder="Enter password" name="Password" />
+      </form>
       <br />
-      <button onclick="window.location.href='/pagesdflsdjds.html'">
+      <button type="submit" form="sign-up-form">
           Sign Up
-        </button>
+      </button>
       <br>
       <a href="./index.html">Already have an account?</a><br>
     </div>
-
-    
 
   </body>
 </html>
