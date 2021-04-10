@@ -13,11 +13,11 @@
         // decode json
         $json_arr = json_decode($data, true);
 
-        $userID = rand(1000000,9999999);
+        $GLOBALS['userID'] = rand(1000000,9999999);
         echo($userID);
 
         // add data
-        $json_arr[] = array('userID'=>$userID, 'email'=>$_POST['Email'], 'password'=>$_POST['Password']);
+        $json_arr[] = array('userID'=>$GLOBALS['userID'], 'email'=>$_POST['Email'], 'password'=>$_POST['Password']);
 
         // encode json and save to file
         file_put_contents('../db/logins.json', json_encode($json_arr));
@@ -27,4 +27,5 @@
 
 <script>
     window.location.href = '../html/home.html';
+    document.cookie = "userID=" + "<?php $GLOBALS['userID']; ?>";
 </script>
