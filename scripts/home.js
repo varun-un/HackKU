@@ -3,7 +3,6 @@ import {calcScore} from "./healthScore.js";
 var leaderboard = document.getElementById("leaderboard");
 
 var curUserID = document.cookie;
-var curUser;
 var groupIDs = [];
 
 groupIDs = fetch("../db/groups.json")
@@ -30,12 +29,29 @@ async function secondfunc() {
                 var userName = userObj.name;
                 groupScoresA[userName] = calcScore(userObj["recCalories"], userObj["recWater"], userObj["recVeg"], userObj["recProtein"],
                      userObj["curCalories"], userObj["curWater"], userObj["curVeg"], userObj["curProtein"]);
+
+                if (groupIDs[i] == curUserID){
+                    var calPercent = (userObj.curCalories)/(userObj.recCalories);
+                    var waterPercent = (userObj.curWater)/(userObj.recWater);
+                    var vegPercent = (userObj.curVeg)/(userObj.recVeg);
+                    var proteinPercent = (userObj.curProtein)/(userObj.recProtein);
+                }
+                var groupScoresB = [groupScoresA, calPercent, waterPercent, vegPercent, proteinPercent];
             }
-            return groupScoresA;
+            return groupScoresB;
         });
 
     async function thirdfunc() {
         groupScores = await groupScores;
+
+        //update progress bars
+        document.getElementById("calbar").style.width = groupScores[1] * 100 + "%";
+        document.getElementById("waterbar").style.width = groupScores[2] * 100 + "%";
+        document.getElementById("vegbar").style.width = groupScores[3] * 100 + "%";
+        document.getElementById("proteinbar").style.width = groupScores[4] * 100 + "%";
+
+
+        groupScores = groupScores[0];
 
         var keysSorted = Object.keys(groupScores).sort(function(a,b){return groupScores[b]-groupScores[a]})
         console.log(keysSorted);

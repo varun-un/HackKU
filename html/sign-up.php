@@ -27,7 +27,7 @@
         $data2 = file_get_contents('../db/userData.json');
 
         // decode json
-        $json_arr2 = json_decode($data, true);
+        $json_arr2 = json_decode($data2, true);
 
         // add data
         $json_arr[] = array('userID'=>$GLOBALS['userID'], 'name'=>$_POST['Name'], 'curCalories'=>0, 'curVeg'=>0, 'curWater'=>0, 'curProtein'=>0, 'recCalories'=>2000, 'recVeg'=>3, 'recWater'=>125, 'recProtein'=>50);
