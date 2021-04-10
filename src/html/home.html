@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>nutritioUS</title>
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css" />
+
+    <!-- import the webpage's javascript file -->
+    <script src="/script.js" defer></script>
+
+    <!--import hamburger reponsive navbar-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </head>
+
+  <body>
+    <div class="navbar" id="myNavbar">
+      <div class="logo">
+        <a href="/home.html" class="active">nutritioUS</a>
+      </div>
+      <a href="/home.html">Home</a>
+      <a href="/track.html">Track</a>
+      <a href="/credits.html">Groups</a>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+    <div class="box2">
+      <h2>
+        Today's Stats
+      </h2>
+      <p>
+        Calories
+      </p>
+      <div id="myProgress">
+        <div id="myBar"></div>
+      </div>
+      <div class="leaderboard">
+        <h2>
+          Leaderboard
+        </h2>
+      </div>
+    </div>
+  </body>
+</html>
