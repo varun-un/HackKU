@@ -3,7 +3,6 @@ import {calcScore} from "./healthScore.js";
 var leaderboard = document.getElementById("leaderboard");
 
 var curUserID = document.cookie;
-console.log(curUserID)
 var curUser;
 var groupIDs = [];
 
