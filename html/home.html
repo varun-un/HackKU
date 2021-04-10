@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>nutritioUS</title>
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="../css/style.css" />
+
+    <!-- import the webpage's javascript file -->
+    <script src="/script.js" defer></script>
+
+    <!--import hamburger reponsive navbar-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+  </head>
+
+  <body>
+    <div class="navbar" id="myNavbar">
+      <div class="logo">
+        <a href="/home.html" class="active">nutritioUS</a>
+      </div>
+      <a href="/home.html">Home</a>
+      <a href="/track.html">Track</a>
+      <a href="/credits.html">Groups</a>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+    <div class="box2">
+      <h2>
+        Today's Stats
+      </h2>
+      <p>
+        Water (fl oz)  <button onclick="move()">+ Add one glass</button>
+      </p>
+      <div class="w3-light-grey">
+        <div class="w3-green" style="height:24px;width:0"></div>
+      </div>
+    
+
+      <p>
+        Calories  <button onclick="move()">+ Add 50 calories</button>
+      </p>
+      <div class="w3-light-grey">
+        <div class="w3-green" style="height:24px;width:0"></div>
+      </div>
+     
+
+      <p>
+        Vegetables (servings)  <button onclick="move()">+ Add 1 Serving of Vegetables</button>
+      </p>
+      <div class="w3-light-grey">
+        <div class="w3-green" style="height:24px;width:0"></div>
+      </div>
+    
+
+      <p>
+        Protein (g)<button onclick="move()">+ Add 1 Gram of Protein</button>
+      </p>
+      <div class="w3-light-grey">
+        <div class="w3-green" style="height:24px;width:0"></div>
+      </div>
+    </div>
+    
+    
+
+    <div class="leaderboard">
+      <h2>
+        Leaderboard
+      </h2>
+      <h3>
+        1. Dipsy - 30 Health
+      </h3>
+      <h3>
+        2. You - 23 Health
+      </h3>
+      <h3>
+        3. Laa-Laa - 20 Health
+      </h3>
+      <h3>
+        4. Tinky-Winky - 19 Health
+      </h3>
+      <h3>
+        5. Po - 14 Health
+      </h3>
+    </div>
+  </body>
+</html>
