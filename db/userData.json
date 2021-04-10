@@ -2,37 +2,49 @@
     {
         "userID": 1984702,
         "name": "Carl Wheezer",
-        "weight": 200,
         "curCalories": 1560,
         "curVeg": 2.3,
         "curWater": 101,
-        "curProtein": 31
+        "curProtein": 31,
+        "recCalories": 2250,
+        "recVeg": 3,
+        "recWater": 125,
+        "recProtein": 50
     },
     {
         "userID": 3390462,
         "name": "Anne Boat",
-        "weight": 130,
         "curCalories": 1400,
         "curVeg": 3.5,
         "curWater": 96,
-        "curProtein": 22
+        "curProtein": 22,
+        "recCalories": 2000,
+        "recVeg": 3,
+        "recWater": 120,
+        "recProtein": 40
     },
     {
         "userID": 9001938,
         "name": "Tim Cook",
-        "weight": 170,
         "curCalories": 1605,
         "curVeg": 1.4,
         "curWater": 136,
-        "curProtein": 59
+        "curProtein": 59,
+        "recCalories": 2250,
+        "recVeg": 3,
+        "recWater": 125,
+        "recProtein": 50
     },
     {
         "userID": 1092738,
         "name": "Po Popompous",
-        "weight": 152,
         "curCalories": 1390,
         "curVeg": 1.7,
         "curWater": 74,
-        "curProtein": 18
+        "curProtein": 18,
+        "recCalories": 2250,
+        "recVeg": 3,
+        "recWater": 125,
+        "recProtein": 50
     }
 ]
