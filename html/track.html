@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Group Page nutritioUS</title>
+    <link rel="stylesheet" href="../css/style.css" />
+
+    <script src="/script.js" defer></script>
+
+    <div class="navbar" id="myNavbar">
+      <div class="logo">
+        <a href="/home.html" class="active">nutritioUS</a>
+      </div>
+      <a href="/home.html">Home</a>
+      <a href="/track.html">Track</a>
+      <a href="/group.html">Groups</a>
+      <a class="profile" href="/profile.html">Profile</a>
+    </div>
+  </head>
+  <body>
+    <div class="page1">
+    <h2 style="text-align: center;font-size:40px;color: #a48686">Health Tracker</h2>
+    <h2 style="text-align: center;">Track your foods for your health!</h2>
+    </div>
+    <img src="https://api.hub.jhu.edu/factory/sites/default/files/styles/landscape/public/drink-more-water-hub.jpg?itok=0rA6JsgA"
+      width="300px"
+      length="300px"
+      alt="Water"
+      class="left"
+    />
+    <form action="">
+      <p style="text-align: center;font-size: larger;">
+        Name of Food
+      </p>
+      <input type="text" name="Name of Food" placeholder="E.g. Pizza"/>
+      <p style="text-align: center;font-size: larger;">
+        Amount of Water (fl oz)
+      </p>
+      <input type="text" name="Amount of Water (fl oz)" placeholder="12">
+      <p style="text-align:center;font-size: larger;">
+        Protein (g)
+      </p>
+      <input type="number" name="Protein" placeholder="100">
+      <p style="text-align:center;font-size: larger;">
+        Calories
+      </p><input type="number" name="Calories" placeholder="E.g. 520">
+      <p style="text-align:center;font-size: larger;">
+        Serving of vegetables
+      </p><input type="text" name="Servings of
+        Vegetables" placeholder="E.g. Broccoli"><br>
+      <button onclick="window.location.href='/home.html'" style="text-align:center;font-size: larger;margin:20px;margin-top:40px;padding:5px;background-color:black;color:white;border-radius:2px;width:100px;">
+          Submit
+        </button>
+      <button onclick="window.location.href='/home.html'" style="text-align:center;font-size: larger;margin:20px;padding:5px;background-color:black;color:white;border-radius:2px;width:120px">
+          Auto-fill
+        </button>
+    </form>
+  </body>
+</html>
