@@ -33,7 +33,7 @@
       <u>Anne Boat</u>
     </h2>
 
-    <form method="post" name="inputFood" id="settings-form" action="profile.php">
+    <form method="post" name="inputFood" id="inputFood" action="profile.php">
     <div class="box3">
       <div class="box4">
         <h2 style="float:left;margin-left:100px;">
@@ -47,21 +47,21 @@
 
       <div class="box4">
         <h2 style="float:left;margin-left:100px;">
-          Target Water:
+          Target Vegetables:
         </h2>
         <input type="text" id="setWater" name="Water" placeholder="E.g. 6" />
         <h2 style="float:right;margin-right:100px;">
-          fl oz
+          servings
         </h2>
       </div>
 
       <div class="box4">
         <h2 style="float:left;margin-left:100px;">
-          Target Vegetables:
+          Target Water:
         </h2>
         <input type="text" id="setVeg" name="Veggies" placeholder="E.g. 2" />
         <h2 style="float:right;margin-right:100px;">
-          servings
+          fl oz
         </h2>
       </div>
 
@@ -77,7 +77,7 @@
       <input type="hidden" id="userID" name="userID" value="document.cookie">
     </form>
       
-      <button type="submit" onclick="document.getElementById('userID').value = document.cookie;" style="text-align:center;float:center;font-size:larger;margin:20px;padding:5px;background-color:black;color:white;border-radius:2px;width:100px;">
+      <button type="submit" form="inputFood" onclick="document.getElementById('userID').value = document.cookie;" style="text-align:center;float:center;font-size:larger;margin:20px;padding:5px;background-color:black;color:white;border-radius:2px;width:100px;">
           Submit
         </button>
       

@@ -6,6 +6,20 @@ var curUserID = document.cookie;
 var groupIDs = [];
 console.log(curUserID);
 
+function deleteAllCookies() {
+    var cookies = document.cookie.split(";");
+
+    for (var i = 0; i < cookies.length; i++) {
+        var cookie = cookies[i];
+        var eqPos = cookie.indexOf("=");
+        var name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
+        document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT";
+        console.log(document.cookie);
+    }
+}
+deleteAllCookies();
+console.log(document.cookie);
+
 groupIDs = fetch("../db/groups.json")
     .then(response => response.json())
         .then(response => {
@@ -18,6 +32,8 @@ groupIDs = fetch("../db/groups.json")
                 }
             }
         });
+
+
 
 async function secondfunc() {
     groupIDs = await groupIDs;
@@ -34,15 +50,18 @@ async function secondfunc() {
                 if (groupIDs[i] == curUserID){
                     var calPercent = (userObj.curCalories)/(userObj.recCalories);
                     var waterPercent = (userObj.curWater)/(userObj.recWater);
+                    console.log(userObj.curWater, userObj.recWater);
                     var vegPercent = (userObj.curVeg)/(userObj.recVeg);
                     var proteinPercent = (userObj.curProtein)/(userObj.recProtein);
                     var recCalories = userObj.recCalories;
                     var recWater = userObj.recWater;
                     var recVeg = userObj.recVeg;
                     var recProtein = userObj.recProtein;
+                    var urHelth = calcScore(userObj["recCalories"], userObj["recWater"], userObj["recVeg"], userObj["recProtein"],
+                    userObj["curCalories"], userObj["curWater"], userObj["curVeg"], userObj["curProtein"]);
                 }
                 var groupScoresB = [groupScoresA, calPercent, waterPercent, vegPercent, proteinPercent, recCalories, recWater, recVeg, 
-                    recProtein];
+                    recProtein, urHelth];
             }
             return groupScoresB;
         });
@@ -51,15 +70,29 @@ async function secondfunc() {
         groupScores = await groupScores;
 
         //update progress bars
+        document.getElementById("calbar").innerHTML = (groupScores[1] * groupScores[5]) + " / " + groupScores[5];
+        document.getElementById("waterbar").innerHTML = (groupScores[2] * groupScores[6]) + " / " + groupScores[6];
+        document.getElementById("vegbar").innerHTML = (groupScores[3] * groupScores[7]) + " / " + groupScores[7];
+        document.getElementById("proteinbar").innerHTML = (groupScores[4] * groupScores[8]) + " / " + groupScores[8];
+        if (groupScores[1] > 1){
+            groupScores[1] = 1;
+        }
+        if (groupScores[2] > 1){
+            groupScores[2] = 1;
+        }
+        if (groupScores[3] > 1){
+            groupScores[3] = 1;
+        }
+        if (groupScores[4] > 1){
+            groupScores[4] = 1;
+        }
         document.getElementById("calbar").style.width = groupScores[1] * 100 + "%";
         document.getElementById("waterbar").style.width = groupScores[2] * 100 + "%";
         document.getElementById("vegbar").style.width = groupScores[3] * 100 + "%";
         document.getElementById("proteinbar").style.width = groupScores[4] * 100 + "%";
 
-        document.getElementById("calbar").innerHTML = (groupScores[1] * groupScores[5]) + " / " + groupScores[5];
-        document.getElementById("waterbar").innerHTML = (groupScores[2] * groupScores[6]) + " / " + groupScores[6];
-        document.getElementById("vegbar").innerHTML = (groupScores[3] * groupScores[7]) + " / " + groupScores[7];
-        document.getElementById("proteinbar").innerHTML = (groupScores[4] * groupScores[8]) + " / " + groupScores[8];
+        //update health score
+        document.getElementById("urHealth").innerHTML = groupScores[9];
 
 
         groupScores = groupScores[0];

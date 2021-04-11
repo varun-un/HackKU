@@ -1,9 +1,9 @@
-document.cookie = 0;
-console.log(document.cookie);
 
 const validLogIn = function(email, password, loginDB){
 
     for (var i = 0; i < loginDB.length; i++){
+
+        document.cookie = 0;
 
         if ((email === loginDB[i].email) && (password === loginDB[i].password)){
             window.location.href = "../html/home.html";
