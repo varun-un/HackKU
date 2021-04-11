@@ -9,7 +9,7 @@
 
     <link rel="stylesheet" href="../css/style.css" />
 
-    <script src="/script.js" defer></script>
+    <script type="text/javascript" src="../scripts/profile.js" defer></script>
 
     <!--import hamburger reponsive navbar-->
     <link
@@ -29,16 +29,17 @@
     </div>
   </head>
   <body class="profile">
-    <h2 style="text-align: center;font-size:40px;color: #a48686">
+    <h2 id="userName" style="text-align: center;font-size:40px;color: #a48686">
       <u>Anne Boat</u>
     </h2>
 
+    <form method="post" name="inputFood" id="settings-form" action="profile.php">
     <div class="box3">
       <div class="box4">
         <h2 style="float:left;margin-left:100px;">
           Target Calories:
         </h2>
-        <input type="text" name="Calories" placeholder="E.g. 1400" />
+        <input type="text" id="setCal" name="Calories" placeholder="E.g. 1400" />
         <h2 style="float:right;margin-right:100px;">
           calories
         </h2>
@@ -48,7 +49,7 @@
         <h2 style="float:left;margin-left:100px;">
           Target Water:
         </h2>
-        <input type="text" name="Calories" placeholder="E.g. 6" />
+        <input type="text" id="setWater" name="Water" placeholder="E.g. 6" />
         <h2 style="float:right;margin-right:100px;">
           fl oz
         </h2>
@@ -58,7 +59,7 @@
         <h2 style="float:left;margin-left:100px;">
           Target Vegetables:
         </h2>
-        <input type="text" name="Calories" placeholder="E.g. 2" />
+        <input type="text" id="setVeg" name="Veggies" placeholder="E.g. 2" />
         <h2 style="float:right;margin-right:100px;">
           servings
         </h2>
@@ -68,19 +69,24 @@
         <h2 style="float:left;margin-left:100px;">
           Target Protein:
         </h2>
-        <input type="text" name="Protein" placeholder="E.g. 30" />
+        <input type="text" id="setProtein" name="Protein" placeholder="E.g. 30" />
         <h2 style="float:right;margin-right:115px;">
           grams
         </h2>
       </div>
+      <input type="hidden" id="userID" name="userID" value="document.cookie">
+    </form>
       
-      <button onclick="window.location.href='/home.html'" style="text-align:center;float:center;font-size:larger;margin:20px;padding:5px;background-color:black;color:white;border-radius:2px;width:100px;">
+      <button type="submit" onclick="document.getElementById('userID').value = document.cookie;" style="text-align:center;float:center;font-size:larger;margin:20px;padding:5px;background-color:black;color:white;border-radius:2px;width:100px;">
           Submit
         </button>
       
     </div>
-    <button onclick="window.location.href='/index.html'" style="text-align:center;font-size:larger;margin:20px;margin-top:40px;padding:5px;background-color:black;color:white;border-radius:2px;width:100px;">
+    <button onclick="window.location.href='./index.html'; clear();" style="text-align:center;float:center;font-size:larger;margin:20px;margin-top:40px;padding:5px;background-color:black;color:white;border-radius:2px;width:100px;">
           Log out
-        </button>
+      </button>
+
+
+
   </body>
 </html>

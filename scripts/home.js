@@ -4,6 +4,7 @@ var leaderboard = document.getElementById("leaderboard");
 
 var curUserID = document.cookie;
 var groupIDs = [];
+console.log(curUserID);
 
 groupIDs = fetch("../db/groups.json")
     .then(response => response.json())
@@ -64,7 +65,7 @@ async function secondfunc() {
         groupScores = groupScores[0];
 
         var keysSorted = Object.keys(groupScores).sort(function(a,b){return groupScores[b]-groupScores[a]})
-        console.log(keysSorted);
+        console.log("wee");
         var groupScoresSorted = {};
         for (var i = 0; i < keysSorted.length; i++){
             groupScoresSorted[keysSorted[i]] = groupScores[keysSorted[i]];

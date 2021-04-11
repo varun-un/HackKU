@@ -1,4 +1,5 @@
 document.cookie = 0;
+console.log(document.cookie);
 
 const validLogIn = function(email, password, loginDB){
 
@@ -17,7 +18,6 @@ const validLogIn = function(email, password, loginDB){
 function logIn(){
     var email = document.getElementById("emailField").value;
     var password = document.getElementById("passField").value;
-    var loginDB;
 
     fetch("../db/logins.json")
         .then(response => response.json())

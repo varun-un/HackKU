@@ -8,8 +8,6 @@
     <title>Group Page nutritioUS</title>
     <link rel="stylesheet" href="../css/style.css" />
 
-    <script src="/script.js" defer></script>
-
     <div class="navbar" id="myNavbar">
       <div class="logo">
         <a href="./home.html" class="active">nutritioUS</a>
@@ -21,6 +19,8 @@
       <a class="profile" href="./profile.html">Profile</a>
 
     </div>
+
+    <script type="text/javascript" src="..\\scripts\track.js" defer></script>
   </head>
   <body>
     <div class="page1">
@@ -33,32 +33,33 @@
       alt="Water"
       class="left"
     />
-    <form action="">
+
+    <form method="post" name="inputFood" id="food-form" action="track.php">
       <p style="text-align: center;font-size: larger;">
         Name of Food
       </p>
-      <input type="text" name="Name of Food" placeholder="E.g. Pizza"/>
+      <input type="text" id="foodInput" name="Name of Food" placeholder="E.g. Pizza"/>
+      <p style="text-align:center;font-size: larger;">
+        Calories
+      </p><input type="number" id="calInput" name="Calories" placeholder="E.g. 520">
       <p style="text-align: center;font-size: larger;">
         Amount of Water (fl oz)
       </p>
-      <input type="text" name="Amount of Water (fl oz)" placeholder="12">
+      <input type="number" id="waterInput" name="Water" placeholder="E.g. 12">
+      <p style="text-align:center;font-size: larger;">
+        Cups of Vegetables
+      </p>
+      <input type="number" id="vegInput" name="Veggies" placeholder="E.g. 1.5">
       <p style="text-align:center;font-size: larger;">
         Protein (g)
-      </p>
-      <input type="number" name="Protein" placeholder="100">
-      <p style="text-align:center;font-size: larger;">
-        Calories
-      </p><input type="number" name="Calories" placeholder="E.g. 520">
-      <p style="text-align:center;font-size: larger;">
-        Serving of vegetables
-      </p><input type="text" name="Servings of
-        Vegetables" placeholder="E.g. Broccoli"><br>
-      <button onclick="window.location.href='/home.html'" style="text-align:center;font-size: larger;margin:20px;margin-top:40px;padding:5px;background-color:black;color:white;border-radius:2px;width:100px;">
+      </p><input type="number" id="proteinInput" name="Protein" placeholder="E.g. 10"><br>
+      <input type="hidden" id="userID" name="userID" value="document.cookie">
+      </form>
+      <button type="submit" onclick="document.getElementById('userID').value = document.cookie;" form="food-form" style="text-align:center;font-size: larger;margin:20px;margin-top:40px;padding:5px;background-color:black;color:white;border-radius:2px;width:100px;">
           Submit
         </button>
-      <button onclick="window.location.href='/home.html'" style="text-align:center;font-size: larger;margin:20px;padding:5px;background-color:black;color:white;border-radius:2px;width:120px">
-          Auto-fill
-        </button>
-    </form>
+      <button onclick="smartFill()" style="text-align:center;font-size: larger;margin:20px;padding:5px;background-color:black;color:white;border-radius:2px;width:120px">
+        Auto-fill
+      </button>
   </body>
 </html>
