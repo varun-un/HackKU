@@ -27,7 +27,7 @@ input {
   border-radius: 50%;
   background-color: lightblue;
   top: 5%;
-  margin-left: 10%;
+  margin-left: 5%;
   background-size: cover;
   position: absolute;
   z-index: -1;
@@ -51,7 +51,55 @@ input {
   border-radius: 50%;
   background-color: lightpink;
   margin-top: 25%;
-  margin-left: 5%;
+  left: 5%;
+  background-size: cover;
+  position: absolute;
+  z-index: -1;
+}
+
+.circle4 {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  background-color: paleturquoise;
+  top: 25%;
+  left: 15%;
+  background-size: cover;
+  position: absolute;
+  z-index: -1;
+}
+
+.circle5 {
+  height: 250px;
+  width: 250px;
+  border-radius: 50%;
+  background-color:#FDFD96;
+  top: 45%;
+  left: 72%;
+  background-size: cover;
+  position: absolute;
+  z-index: -1;
+}
+
+.circle6 {
+  height: 315px;
+  width: 315px;
+  border-radius: 50%;
+  background-color:#C3B1E1;
+  top: 65%;
+  left: 35%;
+  background-size: cover;
+  position: absolute;
+  z-index: -1;
+}
+
+.circle7 {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  background-color:#FFABAB;
+  top: 15%;
+  left: 15%;
   background-size: cover;
   position: absolute;
   z-index: -1;
