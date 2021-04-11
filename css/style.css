@@ -39,7 +39,7 @@ input {
   border-radius: 50%;
   background-color: lightgray;
   margin-top: 5%;
-  margin-left: 55%;
+  margin-left: 65%;
   background-size: cover;
   position: absolute;
   z-index: -1;
@@ -98,8 +98,20 @@ input {
   width: 150px;
   border-radius: 50%;
   background-color:#FFABAB;
-  top: 15%;
+  top: 115%;
   left: 15%;
+  background-size: cover;
+  position: absolute;
+  z-index: -1;
+}
+
+.circle8 {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  background-color:#FFABAB;
+  top: 15%;
+  left: 85%;
   background-size: cover;
   position: absolute;
   z-index: -1;
