@@ -26,7 +26,7 @@ input {
   width: 300px;
   border-radius: 50%;
   background-color: lightblue;
-  margin-top: 0%;
+  top: 5%;
   margin-left: 10%;
   background-size: cover;
   position: absolute;
@@ -39,7 +39,7 @@ input {
   border-radius: 50%;
   background-color: lightgray;
   margin-top: 5%;
-  margin-left: 75%;
+  margin-left: 55%;
   background-size: cover;
   position: absolute;
   z-index: -1;
@@ -50,7 +50,7 @@ input {
   width: 200px;
   border-radius: 50%;
   background-color: lightpink;
-  margin-top: 55%;
+  margin-top: 25%;
   margin-left: 5%;
   background-size: cover;
   position: absolute;
