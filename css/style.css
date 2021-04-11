@@ -50,7 +50,7 @@ input {
   width: 200px;
   border-radius: 50%;
   background-color: lightpink;
-  margin-top: 30%;
+  margin-top: 25%;
   left: 5%;
   background-size: cover;
   position: absolute;
@@ -183,6 +183,16 @@ h2 {
   padding: 0px;
   margin: 0px 0px 20px 0px;
   color: black;
+}
+
+.slogan {
+  text-align: center;
+  font-family: Helvetica, Sans-Serif;
+  font-size: 24px;
+  padding: 0px;
+  margin: 0px 0px 20px 0px;
+  color: rgb(1, 1, 61);
+  margin-top: 0px;
 }
 
 .navbar {
