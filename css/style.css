@@ -28,6 +28,7 @@ input {
   background-color: lightblue;
   margin-top: 5%;
   margin-left: 10%;
+  background-size: cover;
 }
 
 .group input{
