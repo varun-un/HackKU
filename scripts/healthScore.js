@@ -55,7 +55,11 @@ function autofill (foodName)
     caloProt[0]=177; 
     caloProt[3]=7;
   }
-  
+  if((foodName === "fries") || (foodName === "french fries") || (foodName === "potato french fries"))
+  {
+    caloProt[0]=267; 
+    caloProt[3]=3;
+  }
   return(caloProt);
 }
 
