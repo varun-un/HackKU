@@ -39,7 +39,7 @@ input {
   border-radius: 50%;
   background-color: lightgray;
   margin-top: 5%;
-  margin-left: 65%;
+  margin-left: 61%;
   background-size: cover;
   position: absolute;
   z-index: -1;
@@ -50,7 +50,7 @@ input {
   width: 200px;
   border-radius: 50%;
   background-color: lightpink;
-  margin-top: 25%;
+  margin-top: 30%;
   left: 5%;
   background-size: cover;
   position: absolute;
@@ -112,6 +112,18 @@ input {
   background-color:#FFABAB;
   top: 15%;
   left: 85%;
+  background-size: cover;
+  position: absolute;
+  z-index: -1;
+}
+
+.circle9 {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  background-color:#FFABAB;
+  top: 135%;
+  left: 65%;
   background-size: cover;
   position: absolute;
   z-index: -1;
