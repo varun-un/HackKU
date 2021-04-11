@@ -21,11 +21,11 @@ input {
   background-color: #e6f0f0;
 }
 
-#circle {
-  background: lightblue;
+.circle {
+  height: 200px;
+  width: 200px;
   border-radius: 50%;
-  width: 100px;
-  height: 100px;
+  background-color: lightblue;
 }
 
 .group input{
