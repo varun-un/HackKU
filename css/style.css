@@ -21,6 +21,13 @@ input {
   background-color: #e6f0f0;
 }
 
+#circle {
+  background: lightblue;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+}
+
 .group input{
   border: 2px hidden black;
   margin: 6px;
