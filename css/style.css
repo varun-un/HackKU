@@ -3,6 +3,7 @@
   margin: 0 auto;
   width: 300px;
   height: auto;
+  position: absolute;
   border-radius: 5px;
   margin-bottom: 20px;
   padding: 30px;
@@ -29,7 +30,7 @@ input {
   margin-top: 5%;
   margin-left: 25%;
   background-size: cover;
-  position: absolute;
+  position: relative;
 }
 
 .group input{
