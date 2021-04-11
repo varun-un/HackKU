@@ -27,7 +27,31 @@ input {
   border-radius: 50%;
   background-color: lightblue;
   margin-top: 5%;
-  margin-left: 25%;
+  margin-left: 15%;
+  background-size: cover;
+  position: absolute;
+  z-index: -1;
+}
+
+.circle2 {
+  height: 400px;
+  width: 400px;
+  border-radius: 50%;
+  background-color: lightgray;
+  margin-top: 2%;
+  margin-left: 50%;
+  background-size: cover;
+  position: absolute;
+  z-index: -1;
+}
+
+.circle3 {
+  height: 400px;
+  width: 400px;
+  border-radius: 50%;
+  background-color: lightpink;
+  margin-top: 5%;
+  margin-left: 15%;
   background-size: cover;
   position: absolute;
   z-index: -1;
