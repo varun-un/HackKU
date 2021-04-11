@@ -22,10 +22,12 @@ input {
 }
 
 .circle {
-  height: 200px;
-  width: 200px;
+  height: 400px;
+  width: 400px;
   border-radius: 50%;
   background-color: lightblue;
+  margin-top: 5%;
+  margin-left: 10%;
 }
 
 .group input{
