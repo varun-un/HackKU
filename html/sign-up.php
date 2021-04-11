@@ -9,30 +9,17 @@
       function add(){
         // read json file
         $data = file_get_contents('../db/logins.json');
-
         // decode json
         $json_arr = json_decode($data, true);
-
         $GLOBALS['userID'] = rand(1000000,9999999);
-
         // add data
         $json_arr[] = array('userID'=>$GLOBALS['userID'], 'email'=>$_POST['Email'], 'password'=>$_POST['Password']);
-
         // encode json and save to file
         file_put_contents('../db/logins.json', json_encode($json_arr));
 
-
-
-        // read json file
         $data2 = file_get_contents('../db/userData.json');
-
-        // decode json
         $json_arr2 = json_decode($data2, true);
-
-        // add data
         $json_arr[] = array('userID'=>$GLOBALS['userID'], 'name'=>$_POST['Name'], 'curCalories'=>0, 'curVeg'=>0, 'curWater'=>0, 'curProtein'=>0, 'recCalories'=>2000, 'recVeg'=>3, 'recWater'=>125, 'recProtein'=>50);
-
-        // encode json and save to file
         file_put_contents('../db/userData.json', json_encode($json_arr));
       }
 

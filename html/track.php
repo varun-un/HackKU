@@ -22,8 +22,8 @@
             if ($value['userID'] == $_POST['userID']) {
                 echo('hello');
                 $json_arr[$key]['curCalories'] = $_POST['Calories'] + $json_arr[$key]['curCalories'];
-                $json_arr[$key]['curVeg'] = $_POST['Water'] + $value['curVeg'];
-                $json_arr[$key]['curWater'] = $_POST['Veggies'] + $value['curWater'];
+                $json_arr[$key]['curVeg'] = $_POST['Veggies'] + $value['curVeg'];
+                $json_arr[$key]['curWater'] = $_POST['Water'] + $value['curWater'];
                 $json_arr[$key]['curProtein'] = $_POST['Protein'] + $value['curProtein'];
             }
         }

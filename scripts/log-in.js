@@ -1,4 +1,4 @@
-
+console.log("hello");
 const validLogIn = function(email, password, loginDB){
 
     for (var i = 0; i < loginDB.length; i++){
