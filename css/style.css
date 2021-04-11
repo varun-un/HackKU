@@ -29,6 +29,7 @@ input {
   margin-top: 5%;
   margin-left: 10%;
   background-size: cover;
+  position: absolute;
 }
 
 .group input{
